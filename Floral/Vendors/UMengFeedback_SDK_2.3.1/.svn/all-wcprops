@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/mobile_asset/!svn/ver/554/trunk/2.0/ios/zichan/zichan/Vendors/UMengFeedback_SDK_2.3.1
+END
+UMFeedbackViewController.m
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/mobile_asset/!svn/ver/547/trunk/2.0/ios/zichan/zichan/Vendors/UMengFeedback_SDK_2.3.1/UMFeedbackViewController.m
+END
+UMFeedbackViewController.h
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/mobile_asset/!svn/ver/547/trunk/2.0/ios/zichan/zichan/Vendors/UMengFeedback_SDK_2.3.1/UMFeedbackViewController.h
+END
+UMFeedback.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/mobile_asset/!svn/ver/547/trunk/2.0/ios/zichan/zichan/Vendors/UMengFeedback_SDK_2.3.1/UMFeedback.h
+END
+libUMFeedback.a
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/mobile_asset/!svn/ver/554/trunk/2.0/ios/zichan/zichan/Vendors/UMengFeedback_SDK_2.3.1/libUMFeedback.a
+END
+UMRecorder.h
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/mobile_asset/!svn/ver/547/trunk/2.0/ios/zichan/zichan/Vendors/UMengFeedback_SDK_2.3.1/UMRecorder.h
+END
+UMOpenMacros.h
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/mobile_asset/!svn/ver/547/trunk/2.0/ios/zichan/zichan/Vendors/UMengFeedback_SDK_2.3.1/UMOpenMacros.h
+END

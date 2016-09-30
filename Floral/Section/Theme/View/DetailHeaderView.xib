@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DetailHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="358" height="230"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="APD-ay-ohf">
+                    <rect key="frame" x="134" y="0.0" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="cIC-id-Dfh"/>
+                        <constraint firstAttribute="height" constant="80" id="dn7-Zz-WgU"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCD-bC-YQi">
+                    <rect key="frame" x="153" y="88" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zN-gX-8ZS">
+                    <rect key="frame" x="126" y="111" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbV-OL-fSJ">
+                    <rect key="frame" x="153" y="151" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2r-cd-fvk">
+                    <rect key="frame" x="126" y="175" width="42" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="IbV-OL-fSJ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="153" id="4HS-Qy-i7d"/>
+                <constraint firstItem="z2r-cd-fvk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="126" id="Ap0-NC-j4Z"/>
+                <constraint firstItem="OCD-bC-YQi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="153" id="K9w-IM-FHj"/>
+                <constraint firstItem="APD-ay-ohf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KA0-yV-OLu"/>
+                <constraint firstItem="7zN-gX-8ZS" firstAttribute="top" secondItem="OCD-bC-YQi" secondAttribute="bottom" constant="3" id="ZQA-8C-s9O"/>
+                <constraint firstItem="OCD-bC-YQi" firstAttribute="top" secondItem="APD-ay-ohf" secondAttribute="bottom" constant="8" id="lYv-Pl-zjH"/>
+                <constraint firstItem="APD-ay-ohf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="134" id="mW2-Oz-Ovv"/>
+                <constraint firstItem="z2r-cd-fvk" firstAttribute="top" secondItem="IbV-OL-fSJ" secondAttribute="bottom" constant="3" id="obn-RA-qBO"/>
+                <constraint firstItem="IbV-OL-fSJ" firstAttribute="top" secondItem="7zN-gX-8ZS" secondAttribute="bottom" constant="20" id="pud-qk-TlU"/>
+                <constraint firstItem="7zN-gX-8ZS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="126" id="s7Z-hs-hjd"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="286" y="295"/>
+        </view>
+    </objects>
+</document>

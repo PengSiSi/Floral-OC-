@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/mobile_asset/!svn/ver/310/trunk/2.0/ios/zichan/zichan/Vendors/AFNetworking
+END
+AFHTTPSessionManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/mobile_asset/!svn/ver/240/trunk/2.0/ios/zichan/zichan/Vendors/AFNetworking/AFHTTPSessionManager.m
+END
+AFURLResponseSerialization.m
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/mobile_asset/!svn/ver/310/trunk/2.0/ios/zichan/zichan/Vendors/AFNetworking/AFURLResponseSerialization.m
+END
+AFNetworkReachabilityManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/mobile_asset/!svn/ver/240/trunk/2.0/ios/zichan/zichan/Vendors/AFNetworking/AFNetworkReachabilityManager.h
+END
+AFURLSessionManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/mobile_asset/!svn/ver/240/trunk/2.0/ios/zichan/zichan/Vendors/AFNetworking/AFURLSessionManager.m
+END
+AFNetworking.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/mobile_asset/!svn/ver/240/trunk/2.0/ios/zichan/zichan/Vendors/AFNetworking/AFNetworking.h
+END
+AFSecurityPolicy.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/mobile_asset/!svn/ver/240/trunk/2.0/ios/zichan/zichan/Vendors/AFNetworking/AFSecurityPolicy.h
+END
+AFURLRequestSerialization.h
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/mobile_asset/!svn/ver/240/trunk/2.0/ios/zichan/zichan/Vendors/AFNetworking/AFURLRequestSerialization.h
+END
+AFNetworkReachabilityManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/mobile_asset/!svn/ver/240/trunk/2.0/ios/zichan/zichan/Vendors/AFNetworking/AFNetworkReachabilityManager.m
+END
+AFSecurityPolicy.m
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/mobile_asset/!svn/ver/240/trunk/2.0/ios/zichan/zichan/Vendors/AFNetworking/AFSecurityPolicy.m
+END
+AFHTTPSessionManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/mobile_asset/!svn/ver/240/trunk/2.0/ios/zichan/zichan/Vendors/AFNetworking/AFHTTPSessionManager.h
+END
+AFURLRequestSerialization.m
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/mobile_asset/!svn/ver/240/trunk/2.0/ios/zichan/zichan/Vendors/AFNetworking/AFURLRequestSerialization.m
+END
+AFURLResponseSerialization.h
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/mobile_asset/!svn/ver/240/trunk/2.0/ios/zichan/zichan/Vendors/AFNetworking/AFURLResponseSerialization.h
+END
+AFURLSessionManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/mobile_asset/!svn/ver/240/trunk/2.0/ios/zichan/zichan/Vendors/AFNetworking/AFURLSessionManager.h
+END

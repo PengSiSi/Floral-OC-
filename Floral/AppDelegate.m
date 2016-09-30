@@ -7,17 +7,59 @@
 //
 
 #import "AppDelegate.h"
+#import "MainTabBarController.h"
+#import "GuideViewController.h"
+#import "IQKeyboardManager.h"
 
 @interface AppDelegate ()
 
+@property (nonatomic, strong) MainTabBarController *tabBarVc;
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [IQKeyboardManager sharedManager].enable = YES;
+    USERDEFAULT_SETOBJ4KEY(@"0", isLogginApp);
+    
+    // 创建窗口
+    UIWindow *window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window = window;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    self.tabBarVc = [[MainTabBarController alloc]init];
+    //将启动完后的状态栏显示出来
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:NO];
+    // 第一次启动 显示引导页
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if ([userDefaults objectForKey:isNotFirstOpenApp] == nil) {
+        [userDefaults setBool:NO forKey:isNotFirstOpenApp];
+        // 显示引导页
+        GuideViewController *guideVc = [[GuideViewController alloc]init];
+        self.window.rootViewController = guideVc;
+        //回调跳转主页
+        guideVc.scrollEnd = ^(){
+        
+            CATransition *transition = [CATransition animation];
+            transition.duration = 0.7f;
+            transition.type = @"pageCurl";//    pageCurl
+            transition.removedOnCompletion = YES;
+            [self.window.layer addAnimation:transition forKey:@"transition"];
+            self.window.rootViewController = self.tabBarVc;
+        };
+    }
+    else{
+        
+        [self jumpMainVc];
+    }
     return YES;
+}
+
+- (void)jumpMainVc{
+    
+    self.window.rootViewController = self.tabBarVc;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ModelSizeCell" id="KGk-i7-Jjw" customClass="ModelSizeCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="选择规格" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHr-Ja-wNO">
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76d-iB-wTe">
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="51" id="ABw-BP-Bg5"/>
+                            <constraint firstAttribute="height" constant="25" id="Vsy-Se-Jzn"/>
+                        </constraints>
+                        <state key="normal" title="周六送">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="SatButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="V7r-4f-lv4"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZH8-mR-uC5">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="51" id="CRm-cX-CaH"/>
+                            <constraint firstAttribute="height" constant="25" id="Vd9-sM-LeI"/>
+                        </constraints>
+                        <state key="normal" title="周一送">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="weekdayButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="e8S-7I-F0d"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="MHr-Ja-wNO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="8" id="2Dr-4s-Fhu"/>
+                    <constraint firstItem="MHr-Ja-wNO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="3" id="2vi-GL-APg"/>
+                    <constraint firstItem="ZH8-mR-uC5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="J3f-xM-OO6"/>
+                    <constraint firstItem="ZH8-mR-uC5" firstAttribute="leading" secondItem="76d-iB-wTe" secondAttribute="trailing" constant="12.5" id="US7-eh-RrN"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="MHr-Ja-wNO" secondAttribute="bottom" constant="3" id="fNU-ou-R7S"/>
+                    <constraint firstItem="76d-iB-wTe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="jLW-0u-QZF"/>
+                    <constraint firstItem="76d-iB-wTe" firstAttribute="leading" secondItem="MHr-Ja-wNO" secondAttribute="trailing" constant="10" id="jlK-jS-jWA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="satButton" destination="76d-iB-wTe" id="EMs-kl-IPo"/>
+                <outlet property="selectModelSizeLabel" destination="MHr-Ja-wNO" id="OqP-cV-iJE"/>
+                <outlet property="weekdayButton" destination="ZH8-mR-uC5" id="0dJ-yB-kuv"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,25 @@
+
+//
+//  SectionViewController.m
+//  Floral
+//
+//  Created by 思 彭 on 16/9/11.
+//  Copyright © 2016年 思 彭. All rights reserved.
+//
+
+#import "SectionViewController.h"
+
+@interface SectionViewController ()
+
+@end
+
+@implementation SectionViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"分组列表";
+}
+
+
+@end

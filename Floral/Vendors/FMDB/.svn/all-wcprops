@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/mobile_asset/!svn/ver/671/trunk/2.0/ios/zichan/zichan/Vendors/FMDB
+END
+FMDatabaseAdditions.m
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/mobile_asset/!svn/ver/240/trunk/2.0/ios/zichan/zichan/Vendors/FMDB/FMDatabaseAdditions.m
+END
+FMDatabase.m
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/mobile_asset/!svn/ver/671/trunk/2.0/ios/zichan/zichan/Vendors/FMDB/FMDatabase.m
+END
+FMDatabaseQueue.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/mobile_asset/!svn/ver/671/trunk/2.0/ios/zichan/zichan/Vendors/FMDB/FMDatabaseQueue.h
+END
+FMResultSet.h
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/mobile_asset/!svn/ver/240/trunk/2.0/ios/zichan/zichan/Vendors/FMDB/FMResultSet.h
+END
+Info.plist
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/mobile_asset/!svn/ver/240/trunk/2.0/ios/zichan/zichan/Vendors/FMDB/Info.plist
+END
+FMDatabasePool.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/mobile_asset/!svn/ver/240/trunk/2.0/ios/zichan/zichan/Vendors/FMDB/FMDatabasePool.h
+END
+FMDatabaseQueue.m
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/mobile_asset/!svn/ver/671/trunk/2.0/ios/zichan/zichan/Vendors/FMDB/FMDatabaseQueue.m
+END
+FMResultSet.m
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/mobile_asset/!svn/ver/240/trunk/2.0/ios/zichan/zichan/Vendors/FMDB/FMResultSet.m
+END
+FMDatabaseAdditions.h
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/mobile_asset/!svn/ver/240/trunk/2.0/ios/zichan/zichan/Vendors/FMDB/FMDatabaseAdditions.h
+END
+FMDatabasePool.m
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/mobile_asset/!svn/ver/240/trunk/2.0/ios/zichan/zichan/Vendors/FMDB/FMDatabasePool.m
+END
+FMDatabase.h
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/mobile_asset/!svn/ver/671/trunk/2.0/ios/zichan/zichan/Vendors/FMDB/FMDatabase.h
+END
+FMDB.h
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/mobile_asset/!svn/ver/240/trunk/2.0/ios/zichan/zichan/Vendors/FMDB/FMDB.h
+END

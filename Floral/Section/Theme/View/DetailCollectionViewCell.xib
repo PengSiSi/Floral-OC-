@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DetailCollectionViewCell" id="gTV-IL-0wX" customClass="DetailCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="199" height="198"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="199" height="198"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ededdedee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nsd-bW-N6Z">
+                        <rect key="frame" x="8" y="130.5" width="82.5" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dded" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JD2-dK-Wc6">
+                        <rect key="frame" x="8" y="151" width="42" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oci-Mt-rR6">
+                        <rect key="frame" x="0.0" y="169" width="199" height="1"/>
+                        <color key="backgroundColor" red="0.40019633507853403" green="0.40019633507853403" blue="0.40019633507853403" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="LFg-1M-XeM"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gzK-8J-8zl">
+                        <rect key="frame" x="18" y="172" width="58" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="23232" image="hp_count">
+                            <color key="titleColor" red="0.62068471858638741" green="0.62068471858638741" blue="0.62068471858638741" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5a-ES-OjV">
+                        <rect key="frame" x="128" y="172" width="58" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="23232" image="p_zan">
+                            <color key="titleColor" red="0.53266115837696337" green="0.53266115837696337" blue="0.53266115837696337" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bqB-RP-1IQ">
+                        <rect key="frame" x="8" y="8" width="183" height="119.5"/>
+                        <color key="backgroundColor" red="0.098778122349229017" green="0.62068471858638741" blue="0.11472293149130215" alpha="1" colorSpace="calibratedRGB"/>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="gzK-8J-8zl" secondAttribute="bottom" constant="9" id="AnM-xs-PmJ"/>
+                <constraint firstItem="nsd-bW-N6Z" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="D0P-y9-I8e"/>
+                <constraint firstItem="bqB-RP-1IQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="HwZ-Tp-RWe"/>
+                <constraint firstAttribute="trailing" secondItem="O5a-ES-OjV" secondAttribute="trailing" constant="13" id="Moc-OW-hc4"/>
+                <constraint firstAttribute="trailing" secondItem="JD2-dK-Wc6" secondAttribute="trailing" constant="149" id="SJO-Mo-8h0"/>
+                <constraint firstItem="Oci-Mt-rR6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZAd-1J-N1G"/>
+                <constraint firstItem="JD2-dK-Wc6" firstAttribute="top" secondItem="nsd-bW-N6Z" secondAttribute="bottom" constant="1" id="ZkS-zs-AEc"/>
+                <constraint firstItem="JD2-dK-Wc6" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="bXy-4r-Qf1"/>
+                <constraint firstItem="O5a-ES-OjV" firstAttribute="top" secondItem="Oci-Mt-rR6" secondAttribute="bottom" constant="2" id="dFo-ju-nTp"/>
+                <constraint firstItem="nsd-bW-N6Z" firstAttribute="top" secondItem="bqB-RP-1IQ" secondAttribute="bottom" constant="3" id="fNA-hI-Ii9"/>
+                <constraint firstItem="Oci-Mt-rR6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="169" id="hfv-f3-WdU"/>
+                <constraint firstItem="gzK-8J-8zl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="18" id="lF1-NM-APu"/>
+                <constraint firstItem="Oci-Mt-rR6" firstAttribute="centerX" secondItem="bqB-RP-1IQ" secondAttribute="centerX" id="mfK-H0-0CK"/>
+                <constraint firstItem="gzK-8J-8zl" firstAttribute="top" secondItem="Oci-Mt-rR6" secondAttribute="bottom" constant="2" id="psV-PR-pCh"/>
+                <constraint firstAttribute="bottom" secondItem="O5a-ES-OjV" secondAttribute="bottom" constant="9" id="pxd-xj-dRb"/>
+                <constraint firstAttribute="trailing" secondItem="bqB-RP-1IQ" secondAttribute="trailing" constant="8" id="t51-u2-LeD"/>
+                <constraint firstItem="bqB-RP-1IQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="wxn-lT-dNT"/>
+                <constraint firstItem="Oci-Mt-rR6" firstAttribute="top" secondItem="JD2-dK-Wc6" secondAttribute="bottom" constant="1" id="ysT-wb-bLb"/>
+            </constraints>
+            <size key="customSize" width="199" height="198"/>
+            <point key="canvasLocation" x="234.5" y="165"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="hp_count" width="15" height="15"/>
+        <image name="p_zan" width="15" height="15"/>
+    </resources>
+</document>
