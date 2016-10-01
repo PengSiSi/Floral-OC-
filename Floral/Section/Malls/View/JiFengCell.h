@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class JIFengModel;
 
 @interface JiFengCell : UICollectionViewCell
 
@@ -14,5 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *desLabel;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+
+@property (nonatomic,strong) JIFengModel *model; /*<#name#>*/
 
 @end

@@ -17,8 +17,7 @@
     [super awakeFromNib];
     self.titleLabel.textColor = GRAY_COLOR;
     self.priceLabel.textColor = PRICE_COLOR;
-}
-
+}   
 - (void)setModel:(JingXuanModel *)model{
     
     _model = model;

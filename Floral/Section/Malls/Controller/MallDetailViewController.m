@@ -12,7 +12,7 @@
 #import "ProfileViewController.h"
 #import "VerifyOrderViewController.h"
 
-@interface MallDetailViewController ()
+@interface MallDetailViewController ()<UIWebViewDelegate>
 
 @property (nonatomic, strong) UIView *maskView;
 
@@ -25,6 +25,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = self.model.fnName;
+    // 创建webView
+    UIWebView *webView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, K_SCREEN_WIDTH, K_SCREEN_HEIGHT - 44)];
+    webView.delegate = self;
+    [self.view addSubview:webView];
+
+    // http://ec.htxq.net/shop/PGoodsAction/goodsDetail.do?goodsId=6ba7d293-1e4f-44a4-8e57-93a5c440df9e
+    // 这里千万不要像我一样拼接url字符串加了空格哟!!!
+    NSString *urlStr = [NSString stringWithFormat:@"%@?goodsId=%@",ShopJingXuanDetail_URL,self.model.fnId];
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [webView loadRequest:request];
     [self setNav];
     [self createBottomView];
 }
@@ -119,7 +130,6 @@
 // 分享
 - (void)rightItemClick{
     
-//    [self.view addSubview:self.maskView];
     [self createMaskView];
 }
 

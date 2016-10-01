@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,17 +19,17 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="FEz-op-B0E">
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VAST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amj-qE-8Iz">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VAST" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amj-qE-8Iz">
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="海风贝花瓶（白色）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2P-7a-3CR">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="海风贝花瓶（白色）" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2P-7a-3CR">
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="81" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxu-sg-cmF">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="81" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxu-sg-cmF">
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -36,16 +37,16 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="amj-qE-8Iz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="2SV-UE-IrP"/>
-                <constraint firstItem="amj-qE-8Iz" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="58" id="FX1-gJ-aVM"/>
                 <constraint firstAttribute="trailing" secondItem="FEz-op-B0E" secondAttribute="trailing" id="Hja-NZ-HIy"/>
-                <constraint firstItem="cxu-sg-cmF" firstAttribute="top" secondItem="q2P-7a-3CR" secondAttribute="bottom" constant="8" id="LHv-5A-8KJ"/>
-                <constraint firstItem="cxu-sg-cmF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="TvG-ZH-uLf"/>
+                <constraint firstItem="amj-qE-8Iz" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="KL0-ub-AiQ"/>
+                <constraint firstItem="q2P-7a-3CR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="9" id="O6l-ZJ-f4k"/>
+                <constraint firstItem="cxu-sg-cmF" firstAttribute="bottom" secondItem="gTV-IL-0wX" secondAttribute="bottomMargin" constant="-8" id="Qqh-G5-nLd"/>
                 <constraint firstItem="FEz-op-B0E" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="UYB-ba-9EV"/>
-                <constraint firstItem="q2P-7a-3CR" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="WLE-GB-3t8"/>
                 <constraint firstItem="FEz-op-B0E" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gkz-bi-yoW"/>
+                <constraint firstItem="q2P-7a-3CR" firstAttribute="top" secondItem="amj-qE-8Iz" secondAttribute="bottom" constant="10" id="kH5-7s-e8q"/>
                 <constraint firstAttribute="bottom" secondItem="FEz-op-B0E" secondAttribute="bottom" id="shj-wl-3fK"/>
-                <constraint firstItem="q2P-7a-3CR" firstAttribute="top" secondItem="amj-qE-8Iz" secondAttribute="bottom" constant="7" id="u22-q1-xp4"/>
+                <constraint firstItem="cxu-sg-cmF" firstAttribute="top" secondItem="q2P-7a-3CR" secondAttribute="bottom" constant="6" id="smr-1Y-hGR"/>
+                <constraint firstItem="cxu-sg-cmF" firstAttribute="leading" secondItem="q2P-7a-3CR" secondAttribute="leading" constant="1" id="xYb-Vx-Deb"/>
             </constraints>
             <size key="customSize" width="183" height="152"/>
             <connections>

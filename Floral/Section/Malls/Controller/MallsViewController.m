@@ -21,12 +21,15 @@
 #import "ShangChengCell.h"
 #import "ShopModel.h"
 #import "MallDetailViewController.h"
+#import "ShangChengVIew.h"
+#import "JIFengModel.h"
 
-@interface MallsViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,SDCycleScrollViewDelegate,headViewDelegate,UICollectionViewDelegateFlowLayout>
+@interface MallsViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,SDCycleScrollViewDelegate,headViewDelegate,UICollectionViewDelegateFlowLayout,UISearchBarDelegate>
 {
     UIView *lineView;
     NSInteger btnTag;
     UICollectionViewFlowLayout *layout;
+    UIView *maskView;
 }
 @property (nonatomic,strong) NSMutableArray *dataArray;
 @property (nonatomic,strong) NSMutableArray *shopDataArray;
@@ -37,10 +40,14 @@
 @property (nonatomic,strong) UICollectionView *JXCollectionView;// 精选
 @property (nonatomic,strong) UICollectionView *shopCollectionView; // 商城
 @property (nonatomic,strong) HeaderView *headerView;
+@property (nonatomic,strong) ShangChengVIew *shangChengHeadView;
+@property (nonatomic,strong) UISearchBar *searchBar;
 
 @end
 
 @implementation MallsViewController
+
+#pragma mark - life cycle
 
 - (void)viewDidLoad{
     btnTag = 1;
@@ -72,8 +79,9 @@
         if ([responseObject[@"msg"] isEqualToString:@"操作成功"]) {
             [SVProgressHUD dismiss];
             self.dataArray = [JingXuanModel mj_objectArrayWithKeyValuesArray:responseObject[@"result"]];
-            [self.collectionView reloadData];
         }
+//        [self.view addSubview:self.collectionView];
+        [self.collectionView reloadData];
         [SVProgressHUD dismiss];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         [SVProgressHUD showErrorWithStatus:@"加载失败"];
@@ -89,11 +97,12 @@
         if (self.jiFenDataArray.count > 0) {
             [self.jiFenDataArray removeAllObjects];
         }
-        if ([responseObject[@"msg"] isEqualToString:@"操作成功"]) {
+//        if ([responseObject[@"msg"] isEqualToString:@"操作成功"]) {
             [SVProgressHUD dismiss];
-            self.jiFenDataArray = [JingXuanModel mj_objectArrayWithKeyValuesArray:responseObject[@"result"]];
-        }
-        [self.collectionView reloadData];
+            self.jiFenDataArray = [JIFengModel mj_objectArrayWithKeyValuesArray:responseObject[@"result"]];
+//            [self.view addSubview:self.collectionView];
+            [self.collectionView reloadData];
+//        }
         [SVProgressHUD dismiss];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         [SVProgressHUD showErrorWithStatus:@"加载失败"];
@@ -112,13 +121,16 @@
         if ([responseObject[@"msg"] isEqualToString:@"操作成功"]) {
             [SVProgressHUD dismiss];
             self.shopDataArray = [ShopModel mj_objectArrayWithKeyValuesArray:responseObject[@"result"]];
+//            [self.view addSubview:self.collectionView];
+            [self.collectionView reloadData];
         }
-        [self.collectionView reloadData];
         [SVProgressHUD dismiss];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         [SVProgressHUD showErrorWithStatus:@"加载失败"];
     }];
 }
+
+#pragma mark - 请求轮播视图数据
 
 - (void)requestScrollViewData{
     
@@ -147,8 +159,9 @@
     self.headerView.imageArray = [imageArray copy];
 }
 
-// 加载精选collectionView
+#pragma mark - 创建collectionView
 
+// 加载精选collectionView
 - (void)createJingXuanCollectionView{
     
     CGFloat space = 10;
@@ -167,6 +180,7 @@
     [_collectionView registerNib:[UINib nibWithNibName:@"ShangChengCell" bundle:nil] forCellWithReuseIdentifier:@"ShangChengCell"];
     [_collectionView registerNib:[UINib nibWithNibName:@"JiFengCell" bundle:nil] forCellWithReuseIdentifier:@"JiFengCell"];
     [self.collectionView registerClass:[HeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headerView"];
+     [self.collectionView registerClass:[ShangChengVIew class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"ShangChengView"];
     [self.view addSubview:_collectionView];
 }
 
@@ -189,15 +203,21 @@
         ShopModel *model = self.shopDataArray[section];
         return model.childrenList.count;
     }
-    else
-    return 20;
+    if (btnTag == 3) {
+        
+        return self.jiFenDataArray.count;
+    }
+    return 0;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     if (btnTag == 1) {
         JingXuanCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"JingXuanCell" forIndexPath:indexPath];
-        cell.model = self.dataArray[indexPath.row];
+        if (self.dataArray.count > 0) {
+            
+            cell.model = self.dataArray[indexPath.row];
+        }
         return cell;
     }
     if (btnTag == 2) {
@@ -205,15 +225,20 @@
         ShangChengCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ShangChengCell" forIndexPath:indexPath];
         cell.backgroundColor = [UIColor greenColor];
         ShopModel *model = self.shopDataArray[indexPath.section];
-        NSArray *childList = model.childrenList;
-        cell.model = childList[indexPath.row];
+        childrenList *childList = (childrenList*)model.childrenList[indexPath.row];
+        pGoods *goodModel = childList.pGoods;
+        cell.model = goodModel;
         return cell;
     }
     if (btnTag == 3) {
         
-        JiFengCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"JiFengCell" forIndexPath:indexPath];
-//        cell.model = self.jiFenDataArray[indexPath.row];
-        return cell;
+            JiFengCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"JiFengCell" forIndexPath:indexPath];
+            if (self.jiFenDataArray.count > 0) {
+                
+                cell.model = self.jiFenDataArray[indexPath.row];
+                return cell;
+        }
+        return nil;
     }
 
     else{
@@ -221,38 +246,49 @@
     }
 }
 
+#pragma mark - UICollectionViewDelegate
+
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
-    
+
     if (indexPath.section == 0) {
         
         if (kind == UICollectionElementKindSectionHeader) {
-            
             self.headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headerView" forIndexPath:indexPath];
+            self.headerView.backgroundColor = [UIColor yellowColor];
             self.headerView.delegate = self;
             return self.headerView;
         }
+    }
+    if (indexPath.section == 1) {
+
+        return nil;
     }
     return nil;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {
-    if (btnTag == 1) {
+    if (section == 0) {
         
-        return (CGSize){K_SCREEN_WIDTH,250};
+        if (btnTag == 1) {
+            
+            return (CGSize){K_SCREEN_WIDTH - 20,230};
+        }
+        if (btnTag == 2) {
+            
+            return (CGSize){(K_SCREEN_WIDTH - 10) / 2,230};
+        }
+        if (btnTag == 3) {
+            
+            return (CGSize){(K_SCREEN_WIDTH - 10) / 2,230};
+        }
+        else
+            
+            return (CGSize){0,0};
     }
-    if (btnTag == 2) {
-        
-        return (CGSize){(K_SCREEN_WIDTH - 10) / 2,230};
-    }
-    if (btnTag == 3) {
-        
-        return (CGSize){(K_SCREEN_WIDTH - 10) / 2,230};
-    }
-    else
-
-        return (CGSize){0,0};
+    return CGSizeZero;
 }
+
 
 //定义每个UICollectionView 的 margin
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
@@ -284,6 +320,22 @@
     }
 }
 
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    if (btnTag == 1) {
+        return CGSizeMake(K_SCREEN_WIDTH, 250);
+    }
+    if (btnTag == 2) {
+        return CGSizeMake((K_SCREEN_WIDTH - 15) / 2, (K_SCREEN_WIDTH - 15) / 2);
+    }
+    if (btnTag == 3) {
+        return CGSizeMake((K_SCREEN_WIDTH - 15) / 2, (K_SCREEN_WIDTH - 15) / 2 + 50);
+    }
+    return CGSizeZero;
+}
+
+#pragma mark - SetNav
+
 - (void)setNav{
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -292,7 +344,7 @@
     [button setImage:[UIImage imageNamed:@"menu"] forState:UIControlStateNormal];
     [button setImage:[[UIImage imageNamed:@"menu"]imageByRotateRight90] forState:UIControlStateSelected];
     UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithCustomView:button];
-    UIBarButtonItem *rightItem = [UIBarButtonItem barButtonItemWithImage:[UIImage imageNamed:@"f_search"] highLightedImage:nil target:self action:@selector(rightItemClick) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightItem = [UIBarButtonItem barButtonItemWithImage:[UIImage imageNamed:@"f_search"] highLightedImage:nil target:self action:@selector(rightSeachItemClick) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = leftItem;
     self.navigationItem.rightBarButtonItem = rightItem;
 }
@@ -333,7 +385,39 @@
     
 }
 
-- (void)rightItemClick{
+- (void)rightSeachItemClick{
+    NSLog(@"搜索");
+    [self createSearchBar];
+    [[UIApplication sharedApplication].keyWindow addSubview:self.searchBar];
+}
+
+- (void)createSearchBar{
+    
+    maskView = [[UIView alloc]initWithFrame:self.view.bounds];
+    maskView.backgroundColor = [UIColor blackColor];
+    maskView.alpha = .5;
+    maskView.userInteractionEnabled = YES;
+    [[UIApplication sharedApplication].keyWindow addSubview:maskView];
+    self.searchBar = [[UISearchBar alloc]init];
+    self.searchBar.delegate = self;
+    self.searchBar.backgroundColor = [UIColor redColor];
+    self.searchBar.frame = CGRectMake(0, 20, K_SCREEN_WIDTH, 49);
+    [self.searchBar setAutocapitalizationType:UITextAutocapitalizationTypeNone];
+    self.searchBar.placeholder = @"请输入搜索关键字";
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(remove:)];
+    [self.navigationController.navigationBar addGestureRecognizer:tap];
+    [maskView addGestureRecognizer:tap];
+}
+
+- (void)remove: (UITapGestureRecognizer *)tap{
+    
+    [maskView removeFromSuperview];
+    [self.searchBar removeFromSuperview];
+}
+
+// 积分换取
+- (void)jiFengGet: (UIButton *)button{
     
 }
 

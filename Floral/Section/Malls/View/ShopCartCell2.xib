@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShopCartCell2" rowHeight="73" id="KGk-i7-Jjw" customClass="ShopCartCell2">
+            <rect key="frame" x="0.0" y="0.0" width="334" height="73"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <frame key="frameInset" width="334" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ad_time" translatesAutoresizingMaskIntoConstraints="NO" id="Wte-KK-d4A">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="McL-t8-LKG"/>
+                            <constraint firstAttribute="width" constant="20" id="tFR-Rf-NvW"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCV-ol-99A">
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="共计: 98" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S32-xs-rjT">
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="含运费(0.0)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPn-0T-PDf">
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsn-38-Qku">
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="  删除订单  ">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.corner">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="deleteOrderClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gzN-Lh-GWU"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TNX-cE-uYb">
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <state key="normal" title="  立即付款  ">
+                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number">
+                                <string key="keyPath">layer.cornerRadius
+</string>
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="keyPath">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="payButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="7MI-vb-n7U"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="TNX-cE-uYb" firstAttribute="top" secondItem="CPn-0T-PDf" secondAttribute="bottom" constant="10" id="5UL-yc-dr2"/>
+                    <constraint firstItem="Wte-KK-d4A" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="8Ee-9U-UvV"/>
+                    <constraint firstItem="tCV-ol-99A" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9DG-FT-afN"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="CPn-0T-PDf" secondAttribute="trailing" constant="-4" id="9Ss-oM-Ssi"/>
+                    <constraint firstItem="S32-xs-rjT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="Onq-et-2aq"/>
+                    <constraint firstItem="CPn-0T-PDf" firstAttribute="leading" secondItem="S32-xs-rjT" secondAttribute="trailing" constant="35" id="QBM-Ni-dqO"/>
+                    <constraint firstItem="tCV-ol-99A" firstAttribute="leading" secondItem="Wte-KK-d4A" secondAttribute="trailing" constant="13" id="bCD-fo-CPM"/>
+                    <constraint firstItem="TNX-cE-uYb" firstAttribute="leading" secondItem="jsn-38-Qku" secondAttribute="trailing" constant="16" id="drO-RP-bHx"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="TNX-cE-uYb" secondAttribute="trailing" constant="7" id="fgE-0d-r2g"/>
+                    <constraint firstItem="CPn-0T-PDf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="i91-jo-Wew"/>
+                    <constraint firstItem="jsn-38-Qku" firstAttribute="top" secondItem="S32-xs-rjT" secondAttribute="bottom" constant="10" id="vCH-Ua-I11"/>
+                    <constraint firstItem="Wte-KK-d4A" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-1" id="zNi-GF-P3d"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="delButton" destination="jsn-38-Qku" id="oYr-0Z-lrt"/>
+                <outlet property="fareLabel" destination="CPn-0T-PDf" id="aMz-h1-hMa"/>
+                <outlet property="payButton" destination="TNX-cE-uYb" id="AF7-jI-hnR"/>
+                <outlet property="timeLabel" destination="tCV-ol-99A" id="wYg-wJ-2Op"/>
+                <outlet property="totalLabel" destination="S32-xs-rjT" id="u2n-M7-BZi"/>
+            </connections>
+            <point key="canvasLocation" x="41" y="111.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ad_time" width="15" height="15"/>
+    </resources>
+</document>

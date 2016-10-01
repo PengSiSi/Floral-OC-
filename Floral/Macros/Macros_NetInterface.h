@@ -105,6 +105,14 @@ NS_INLINE NSDictionary *CommentListParameter(NSString *currentPageIndex, NSStrin
 // 2.商城精选  GET
 #define ShopJingXuanList_URL ([NSString stringWithFormat:@"http://ec.htxq.net/rest/htxq/index/jingList/1"])
 
+// 积分列表
+#define ShopJingXuanDetail_URL ([NSString stringWithFormat:@"http://ec.htxq.net/shop/PGoodsAction/goodsDetail.do"])
+
+// 参数构造
+NS_INLINE NSDictionary *ShopJingXuanDetailParameter(NSString *goodsId) {
+    return NSDictionaryOfVariableBindings(goodsId);
+}
+
 // 商城列表
 #define ShangChengList_URL ([NSString stringWithFormat:@"http://ec.htxq.net/rest/htxq/index/theme"])
 
@@ -113,6 +121,9 @@ NS_INLINE NSDictionary *CommentListParameter(NSString *currentPageIndex, NSStrin
 
 // 加入购物车  GET
 #define Add_ShopCart_URL ([NSString stringWithFormat:@"http://ec.htxq.net/rest/htxq/cart/add"])
+
+// 购物车列表  GET
+#define ShopCartList_URL ([NSString stringWithFormat:@"http://ec.htxq.net/rest/htxq/cart/list/ee995481-3a02-45f1-889f-348d737a9336"])
 
 
 #endif /* Macro_NetInterface_h */
